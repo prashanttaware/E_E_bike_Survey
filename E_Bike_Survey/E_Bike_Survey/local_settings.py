@@ -1,0 +1,29 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# SECURITY WARNING: keep the secret key used in production secret!
+# DO NOT use this one for production!
+SECRET_KEY ='q20=qj8qfktc_0)w9o9$gj_c2o8hja(+v$9it6yta4wq$wiolr'
+
+# Uncomment the following DATABASES block to use sqlite3
+
+DATABASES = {
+    'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
+ }
+
+# Uncomment the following DATABASES block to use mySQL
+# Remember to also create the my.cnf file and set your connection string there
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'OPTIONS': {
+#             'read_default_file': os.path.join(BASE_DIR, 'my.cnf'),
+#             'charset': 'utf8mb4'
+#         },
+#     }
+# }
